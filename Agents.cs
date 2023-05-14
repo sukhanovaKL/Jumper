@@ -44,10 +44,13 @@ namespace Jumper
         public string PriorityText => "Приоритетность " + Priority;
 
         [NotMapped]
-        public string TypeAndNameAgent =>  "1 | " + AgentName;
+        public string TypeAndNameAgent =>  AgentTypes.Name + " | " + AgentName;
 
         [NotMapped]
         public BitmapImage AgentPhotoFromResources => !string.IsNullOrEmpty(AgentLogotip) ? new BitmapImage(new Uri("C:/Users/79393/source/repos/Jumper/Photos/" + AgentLogotip)) : new BitmapImage(new Uri("C:/Users/79393/source/repos/Jumper/Photos/picture.png"));
+
+        [NotMapped]
+        public string ProcentProdash => (ProductCount * 9000) >= 500000? "25%" : (ProductCount * 9000) >= 150000? "20%" : (ProductCount * 9000) >= 50000 ? "10%" : (ProductCount * 9000) >= 10000 ? "5%" : "0%";
 
         public virtual AgentTypes AgentTypes { get; set; }
 

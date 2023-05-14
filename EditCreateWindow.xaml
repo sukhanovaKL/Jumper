@@ -1,0 +1,61 @@
+﻿<Window x:Class="Jumper.EditCreateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Jumper" xmlns:system="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Редактирование агента" Height="450" Width="850">
+    <Window.Resources>
+        <system:String x:Key="NullImage">
+            pack://application:,,,/Photos/picture.png
+        </system:String>
+    </Window.Resources>
+    <Grid x:Name="AgentGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition  Width="2*"></ColumnDefinition>
+            <ColumnDefinition  Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Image Height="150" Width="150" Grid.Row="1" Grid.RowSpan="3" Source="{Binding AgentPhotoFromResources}"></Image>
+
+        <Label Content="Наименование" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left"></Label>
+        <TextBox x:Name="NameAgentTexBox" Text="{Binding AgentName}" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="25" Width="200"></TextBox>
+ 
+        <Label Content="Тип агента" Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left"></Label>
+        <ComboBox x:Name="AgentTypeComBoBox" SelectedValue="{Binding AgentTypes.Name}" Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="25" Width="200"></ComboBox>
+
+        <Label Content="Приоритет" Grid.Column="1" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Left"></Label>
+        <TextBox x:Name="PriorityTextBox" Text="{Binding Priority}" Grid.Column="1" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="25" Width="200"></TextBox>
+
+        <Label Content="Адрес" Grid.Column="1" Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Left"></Label>
+        <TextBox x:Name="AddressTextBox" Text="{Binding AgentAddress}" Grid.Column="1" Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="25" Width="200"></TextBox>
+
+        <Label Content="ИНН" Grid.Column="1" Grid.Row="4" VerticalAlignment="Bottom" HorizontalAlignment="Left"></Label>
+        <TextBox x:Name="INNTextBox" Text="{Binding INN}" Grid.Column="1" Grid.Row="4" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="25" Width="200"></TextBox>
+
+        <Label Content="КПП" Grid.Column="2" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Left"></Label>
+        <TextBox x:Name="KPPTextBox" Text="{Binding KPP}" Grid.Column="2" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="25" Width="200"></TextBox>
+
+        <Label Content="Имя директора" Grid.Column="2" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left"></Label>
+        <TextBox x:Name="DirectorNameTextBox" Text="{Binding DirectorFio}" Grid.Column="2" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="25" Width="200"></TextBox>
+
+        <Label Content="Телефон" Grid.Column="2" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Left"></Label>
+        <TextBox x:Name="AgentNumberTextBox" Text="{Binding AgentPhone}" Grid.Column="2" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="25" Width="200"></TextBox>
+
+        <Label Content="Email компании" Grid.Column="2" Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Left"></Label>
+        <TextBox x:Name="AgentEmailTextBox" Text="{Binding AgentEmail}" Grid.Column="2" Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="25" Width="200"></TextBox>
+ 
+        <Button x:Name="SaveButton" Content="Сохранить" Width="150" Height="30" Grid.Column="2" Grid.Row="5" Click="SaveButton_Click"></Button>
+        <Button x:Name="ExitButton" Content="Назад" Width="150" Height="30" Grid.Column="1" Grid.Row="5" Click="ExitButton_Click"></Button>
+    </Grid>
+</Window>

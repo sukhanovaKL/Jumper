@@ -33,8 +33,8 @@
 
         <Label Content="Фильтрация" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left"></Label>
         <ComboBox Background="#FF76E383" Grid.Row="1" Grid.Column="2" Name="ComboBoxFilter"  Height="30" Width="200" HorizontalAlignment="Right" SelectionChanged="ComboBoxFilter_SelectionChanged"/>
-        
-        
+
+        <Button Content="Добавить агента"   Grid.Row="0" Grid.Column="2" Name="CreateButton"  Height="30" Width="200" HorizontalAlignment="Center" Click="CreateButton_Click"></Button>
 
         <ListView Grid.Row="2" Grid.ColumnSpan="3" x:Name="ListAgents" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListView.ItemsPanel>
@@ -62,8 +62,9 @@
                             <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding SaleCount}" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
                             <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding AgentPhone}" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
                             <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding PriorityText}" VerticalAlignment="Center" HorizontalAlignment="Left"></TextBlock>
-                            <TextBlock Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Text="10%" VerticalAlignment="Center" HorizontalAlignment="Left"></TextBlock>
-                            <Button Grid.Row="2" Grid.Column="2" Content="Удалить" x:Name="DeleteButton" Click="DeleteButton_Click" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Left"></Button>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Text="{ Binding ProcentProdash}" VerticalAlignment="Center" HorizontalAlignment="Right"></TextBlock>
+                            <Button Grid.Row="1" Grid.Column="2" Content="Удалить" x:Name="DeleteButton" Click="DeleteButton_Click"  VerticalAlignment="Center" HorizontalAlignment="Center" Width="100"></Button>
+                            <Button Grid.Row="2" Grid.Column="2" Content="Редактировать" x:Name="EditButton" Click="EditButton_Click"  VerticalAlignment="Top" HorizontalAlignment="Center" Width="100"></Button>
                         </Grid>
                     </Border>
                 </DataTemplate>

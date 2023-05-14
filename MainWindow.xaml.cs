@@ -84,5 +84,17 @@ namespace Jumper
                 MessageBox.Show("Ошибка");
             }
         }
+
+        private void EditButton_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            new EditCreateWindow((sender as Button).DataContext as Agents, true).Show();
+        }
+
+        private void CreateButton_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            new EditCreateWindow(new Agents(), false).Show();
+        }
     }
 }
