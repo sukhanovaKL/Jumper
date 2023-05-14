@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="74161f6dcbc74014aca631ffca11820d" Name="Diagram1">
+        <EntityTypeShape EntityType="JumperModel.Agents" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.AgentTypes" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.Application" Width="1.5" PointX="14.25" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.ApplicationStatuses" Width="1.5" PointX="12" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.Deliverys" Width="1.5" PointX="12" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.Employees" Width="1.5" PointX="12" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.HistiryChangesAgentCost" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.HistiryChangesMaterials" Width="1.5" PointX="7.5" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.Materials" Width="1.5" PointX="5.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.MaterialsType" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.NFCEmployee" Width="1.5" PointX="14.25" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.Postavshiks" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.Products" Width="1.5" PointX="8.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.ProductTypes" Width="1.5" PointX="6" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.Roles" Width="1.5" PointX="9.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.TimeDoor" Width="1.5" PointX="14.25" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="JumperModel.UnitMeasurements" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <AssociationConnector Association="JumperModel.FK__Agents__ProductC__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="JumperModel.FK__HistiryCh__Agent__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="JumperModel.FK__Products__AgentI__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="JumperModel.FK__Postavshi__Agent__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="JumperModel.FK__Applicati__Deliv__6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="JumperModel.FK__Applicati__Emplo__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="JumperModel.FK_Application_ApplicationStatuses" ManuallyRouted="false" />
+        <AssociationConnector Association="JumperModel.FK__Employees__RoleI__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="JumperModel.FK__NFCEmployee__NFC__74AE54BC" ManuallyRouted="false" />
+        <AssociationConnector Association="JumperModel.FK__TimeDoor__Employ__71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="JumperModel.FK__HistiryCh__Mater__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="JumperModel.FK__HistiryCh__Mater__6EF57B66" ManuallyRouted="false" />
+        <AssociationConnector Association="JumperModel.FK__Materials__Cost__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="JumperModel.FK__Materials__Mater__01142BA1" ManuallyRouted="false" />
+        <AssociationConnector Association="JumperModel.FK__Materials__UnitM__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="JumperModel.FK__Products__Number__5070F446" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
